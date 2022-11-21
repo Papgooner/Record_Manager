@@ -1,0 +1,67 @@
+.button {
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #4f005f;
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background: #741188;
+    border-color: #741188;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.input {
+    padding: 0.25rem 1rem;
+    font: inherit;
+    border: 1px solid #4f005f;
+    border-radius: 6px;
+}
+
+.button {
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #4f005f;
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.cancel {
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #4f005f;
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.inputText {
+    font-size: 1.2vw;
+}
+
+.cancel:hover,
+.cancel:active {
+    background: #741188;
+    border-color: #741188;
+}
+
+.submit:hover,
+.submit:active {
+    background: #741188;
+    border-color: #741188;
+}
+
+.appCard {
+    background-color: #b86fc6;
+    top: 0,
+    bottom: 0,
+}
