@@ -24,9 +24,16 @@ function AddUser(props) {
         if (+ageData > 122) {
             setError({
                 title: "Invalid age",
-                message: "The oldest person to ever live was 122. Your age is likely significantly lower."
+                message: "The oldest person to ever live was 122. Your age is likely significantly lower. (input < 122)."
             });
             console.log(error);
+            return;
+        }
+        if (+ageData < 1) {
+            setError({
+                title: "Invalid age",
+                message: "Please input a valid age (input > 1)."
+            });
             return;
         }
         props.passUp(nameData, ageData);
@@ -47,12 +54,12 @@ function AddUser(props) {
     return (
         <div>
             {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
-            <form onSubmit={submitHandler}>
+            <form className={styles.addUserForm} onSubmit={submitHandler}>
                 <label htmlFor="id" className={styles.inputText}>Name</label>
                 <input id="name" className={styles.input} type="text" onChange={nameChangeHandler} />
                 <label htmlFor="age" className={styles.inputText}>Age</label>
                 <input id="age" type="number" className={styles.input} onChange={ageChangeHandler} />
-                <Button type="submit" className={styles.button} content={"Submit"}></Button>
+                <Button type="submit" className={styles.submit} content={"Submit"}></Button>
             </form>
         </div>
     )
